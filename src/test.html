@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+
+<body>
+	<div id="app">
+	</div>
+	<!-- <div style="display:none" class="ad-container ad-container-single-media-element-annotations ad-overlay" style="height: 475px; width: 844px;">
+		<div
+		 class="videoAdUi" style="">
+			<div class="videoAdUiTopBar videoAdUiTopBarWithGradients videoAdUiTopBarTransitions" style="">
+				<div class="videoAdUiAuthorIcon" style=""><img src="https://yt3.ggpht.com/a-/ACSszfEfUAdqrPnk7MHjS0dBLYj26IcsKef4J-IT_A=s88-mo-c-c0xffffffff-rj-k-no" class="videoAdUiAuthorIconImage"></div>
+				<div
+				 class="videoAdUiTopButtons">
+					<div class="videoAdUiTopButton videoAdUiTopButtonInfo" style="display: none;">
+						<div class="videoAdUiTopButtonCallout">
+							<div class="videoAdUiTopButtonTooltip">undefined</div>
+						</div>
+					</div>
+					<div class="videoAdUiTopButton videoAdUiTopButtonShare">
+						<div class="videoAdUiTopButtonCallout">
+							<div class="videoAdUiTopButtonTooltip videoAdUiTopButtonShareTooltip">Compartir</div>
+						</div>
+					</div>
+					<div class="videoAdUiTopButton videoAdUiTopButtonWatchLater" style="display: none;">
+						<div class="videoAdUiTopButtonCallout">
+							<div class="videoAdUiTopButtonTooltip">undefined</div>
+						</div>
+					</div>
+				</div>
+				<div class="videoAdUiTitle ellipsisText videoAdUiTitleWithAuthorIcon" style="">Old Spice | Leyenda Épica poderoso antitranspirante de Old Spice</div>
+				<div class="videoAdUiAuthorName ellipsisText videoAdUiAuthorNameWithAuthorIcon"
+				 style="">de Old Spice Latinoamérica</div>
+			</div>
+			<div class="videoAdUiBottomBar">
+				<div class="videoAdUiBottomBarText">
+					<div class="videoAdUiAttributionContainer videoAdUiWtaClickable">
+						<div class="videoAdUiAttribution">Anuncio · 0:14</div>
+						<div class="videoAdUiAttributionIconContainer">
+							<div class="videoAdUiAttributionIcon" id="videoAdUiAttributionIcon"></div>
+							<div class="videoAdUiAdInfoPopup">
+								<div class="videoAdUiAdInfoPopupCallout"></div>
+								<div class="videoAdUiAdInfoPopupText"><span class="videoAdUiAdSettingsShortTooltip">¿Por qué este anuncio?</span></div>
+							</div>
+						</div>
+					</div>
+					<div class="videoAdUiVisitAdvertiserLink">
+						<div class="videoAdUiVisitAdvertiserLinkText">youtube.com</div>
+						<div class="videoAdUiVisitAdvertiserIcon"></div>
+					</div>
+				</div>
+				<div class="videoAdUiBottomBarMessage"></div>
+			</div>
+			<div class="videoAdUiProgressBar" dir="ltr">
+				<div class="videoAdUiBuffer" style="width: 100%;"></div>
+				<div class="videoAdUiProgress" style="width: 33.0757%;"></div>
+			</div>
+			<div class="videoAdUiPreSkipContainer videoAdUiPreSkipContainerPlainThumbnailCountdown" style="opacity: 0.9; visibility: hidden;">
+				<div class="videoAdUiPreSkipButton">
+					<div class="videoAdUiPreSkipText videoAdUiPreSkipTextForcedLineBreak" style="display: none;">You can skip to video in</div>
+					<div class="videoAdUiPreSkipThumbnail">
+						<div class="videoAdUiPreSkipThumbnailCountdown"><span class="videoAdUiPreSkipTextTimeLeft">1</span></div><img src="//i1.ytimg.com/vi/tND4E5mSgcY/mqdefault.jpg" class="videoAdUiPreSkipThumbnailImage"></div>
+				</div>
+			</div>
+			<div class="videoAdUiSkipContainer html5-stop-propagation" style="opacity: 1;"><button class="videoAdUiSkipButton videoAdUiAction videoAdUiFixedPaddingSkipButton"><div class="videoAdUiSkipButtonExperimentalText videoAdUiFixedPaddingSkipButtonText">Omitir
+						anuncio</div>
+					<div class="videoAdUiExperimentalSkipIcon videoAdUiFixedPaddingSkipButtonIcon"></div></button></div>
+		</div>
+	</div> -->
+	<script>
+
+		function callback(mutations) {
+			mutations.forEach((mutation) => {
+				console.log('M', mutation);
+				mutation.addedNodes.forEach((node) => {
+					console.log('NOde', node.innerHTML);
+				});
+			});
+		}
+
+		const observer = new MutationObserver(callback);
+
+		observer.observe(document.body, {
+			childList: true,
+			subtree: true,
+			characterData: true,
+		});
+		// const skipButtonSelector =
+		// 	'.videoAdUiSkipButton.videoAdUiAction.videoAdUiFixedPaddingSkipButton';
+		// const app = document.querySelector('#app');
+		// const btn = `<div id="container-add"><button id="asd" class="videoAdUiSkipButton videoAdUiAction videoAdUiFixedPaddingSkipButton" onclick="console.log('Skip Ad Clicked')">Skip Ad</button></div>`;
+		// function addButton() {
+		// 	const exist = document.querySelector(skipButtonSelector);
+		// 	if (exist) {
+		// 		exist.remove();
+		// 	}
+		// 	const newBtn = document.createElement('section');
+		// 	newBtn.id = "wat";
+		// 	newBtn.innerHTML = btn;
+		// 	// const app = document.querySelector('#container-add');
+		// 	document.body.appendChild(newBtn);
+		// }
+	</script>
+</body>
+
+</html>

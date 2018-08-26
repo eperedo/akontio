@@ -1,0 +1,20 @@
+{
+	"name": "skip-youtube",
+	"version": "1.0",
+	"description": "Click the skip ad by you!",
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"https://www.youtube.com/*",
+				"file:///Users/eperedo/workspace/opensource/libraries/skip-youtube/src/test.html"
+			],
+			"js": ["content.js"]
+		}
+	],
+	"permissions": ["activeTab"],
+	"manifest_version": 2
+}

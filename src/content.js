@@ -22,7 +22,6 @@ const callback = mutationsList => {
 					return typeAd;
 				}
 				if (containsClass(node, 'videoAdUi')) {
-					console.log(node.classList);
 					typeAd = 'video-ad';
 					return typeAd;
 				}
@@ -37,10 +36,7 @@ const callback = mutationsList => {
 					el = document.querySelector(skipButtonSelector);
 				}
 				if (el) {
-					console.log('Skip-Youtube Element:', el.innerHTML);
-					console.log('Skip-Youtube Type:', typeAd);
 					el.click();
-					console.log('Skip-Youtube: Clicked');
 				}
 				return;
 			}

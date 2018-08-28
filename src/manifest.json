@@ -1,17 +1,13 @@
 {
-	"name": "skip-youtube",
-	"version": "1.0",
-	"description": "Click the skip ad by you!",
+	"name": "skipube",
+	"version": "1.0.1",
+	"description": "automatically close/skip youtube image/video ads!",
 	"background": {
-		"scripts": ["background.js"],
-		"persistent": false
+		"scripts": ["background.js"]
 	},
 	"content_scripts": [
 		{
-			"matches": [
-				"https://www.youtube.com/*",
-				"file:///Users/eperedo/workspace/opensource/libraries/skip-youtube/src/test.html"
-			],
+			"matches": ["https://www.youtube.com/*"],
 			"js": ["content.js"]
 		}
 	],
